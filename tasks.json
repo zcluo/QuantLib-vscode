@@ -1,0 +1,402 @@
+{
+    // 这里配置了三个Task
+    "tasks": [
+        // Task 1：生成build文件夹
+        // Task 1：生成build文件夹
+        {
+            "type": "shell", // 这里决定了task的类型，shell类型就是在命令行里运行command的命令，还有一种类型是“process”，这里就不介绍了
+            "label": "mk_build", // task的名字
+            "command": "mkdir", // 需要被运行的命令
+            "args": [
+                "-p",
+                "build"
+            ], // 传递给command的参数
+            "options": {
+                "cwd": "${workspaceFolder}",
+            },
+        },
+        // Task 3：运行make-clean
+        {
+            "type": "shell",
+            "label": "clean-debug",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build/",
+                "--config",
+                "Debug",
+                "--parallel",
+                "12",
+                "--target",
+                "clean"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build",
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build", // 这里说明这个任务时输入"build"类型的，也就是说明，这是一个生成任务
+                "isDefault": true
+            },
+            "dependsOn": []
+        },
+        // Task 2：运行cmake-debug
+        {
+            "type": "shell",
+            "label": "cmake-debug",
+            "command": "cmake",
+            "args": [
+                "--no-warn-unused-cli",
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE",
+                //"-DCMAKE_BUILD_TYPE:STRING=Debug",
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "-DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc",
+                "-DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++",
+                "-DCMAKE_C_FLAGS=-g",
+                "-DCMAKE_CXX_FLAGS=-g -Wall -O0  -std=c++11 -pthread",
+                "TIMEOUT",
+                "3600",
+                "-G",
+                "Unix Makefiles", // 这里必须定义生成器，否则默认cmake生成的是VS Studio可编译的工程
+                "${workspaceFolder}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build", // 工作路径，就是说cmake的输出都会放在${workspaceFolder}/build文件夹下
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": ["mk_build"]
+        },
+        // Task 3：运行build ql_library debug
+        {
+            "type": "shell",
+            "label": "buildlib-debug",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build/",
+                "--config",
+                "Debug",
+                "--parallel",
+                "12",
+                "--target",
+                "ql_library"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build",
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build", // 这里说明这个任务时输入"build"类型的，也就是说明，这是一个生成任务
+                "isDefault": true
+            },
+            "dependsOn": [
+                "cmake-debug" // 这里设置，说明了这个任务一定要在Task “cmake”执行之后方可执行
+            ]
+        },
+        // Task 4：运行build test
+        {
+            "type": "shell",
+            "label": "buildtest-debug",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build/",
+                "--config",
+                "Debug",
+                "--parallel",
+                "12",
+                "--target",
+                "test"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build",
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build", // 这里说明这个任务时输入"build"类型的，也就是说明，这是一个生成任务
+                "isDefault": true
+            },
+            "dependsOn": [
+                "buildtestmain-debug" // 这里设置，说明了这个任务一定要在Task “cmake”执行之后方可执行
+            ]
+        },
+        // Task 5：运行build all
+        {
+            "type": "shell",
+            "label": "buildall-debug",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build/",
+                "--config",
+                "Debug",
+                "--parallel",
+                "12",
+                "--target",
+                "all"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build",
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build", // 这里说明这个任务时输入"build"类型的，也就是说明，这是一个生成任务
+                "isDefault": true
+            },
+            "dependsOn": [
+                "cmake-debug" // 这里设置，说明了这个任务一定要在Task “cmake”执行之后方可执行
+            ]
+        },
+        // Task 3：运行make-clean
+        {
+            "type": "shell",
+            "label": "clean-release",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build/",
+                "--config",
+                "Release",
+                "--parallel",
+                "12",
+                "--target",
+                "clean"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build",
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build", // 这里说明这个任务时输入"build"类型的，也就是说明，这是一个生成任务
+                "isDefault": true
+            },
+            "dependsOn": []
+        },
+        // Task 2：运行cmake-debug
+        {
+            "type": "shell",
+            "label": "cmake-release",
+            "command": "cmake",
+            "args": [
+                "--no-warn-unused-cli",
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE",
+                //"-DCMAKE_BUILD_TYPE:STRING=Debug",
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc",
+                "-DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++",
+                "-DCMAKE_C_FLAGS=-g",
+                "-DCMAKE_CXX_FLAGS=-g -Wall -O0  -std=c++11 -pthread",
+                "TIMEOUT",
+                "3600",
+                "-G",
+                "Unix Makefiles", // 这里必须定义生成器，否则默认cmake生成的是VS Studio可编译的工程
+                "${workspaceFolder}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build", // 工作路径，就是说cmake的输出都会放在${workspaceFolder}/build文件夹下
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": [
+                "mk_build" // 这里设置，说明了这个任务一定要在Task “cmake”执行之后方可执行
+            ]
+        },
+        // Task 3：运行build ql_library release
+        {
+            "type": "shell",
+            "label": "buildlib-release",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build/",
+                "--config",
+                "Release",
+                "--parallel",
+                "12",
+                "--target",
+                "ql_library"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build",
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build", // 这里说明这个任务时输入"build"类型的，也就是说明，这是一个生成任务
+                "isDefault": true
+            },
+            "dependsOn": [
+                "cmake-release" // 这里设置，说明了这个任务一定要在Task “cmake”执行之后方可执行
+            ]
+        },
+        // Task 4：运行build test
+        {
+            "type": "shell",
+            "label": "buildtest-release",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build/",
+                "--config",
+                "Release",
+                "--parallel",
+                "12",
+                "--target",
+                "test"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build",
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build", // 这里说明这个任务时输入"build"类型的，也就是说明，这是一个生成任务
+                "isDefault": true
+            },
+            "dependsOn": [
+                "buildtestmain-release" // 这里设置，说明了这个任务一定要在Task “cmake”执行之后方可执行
+            ]
+        },
+        // Task 5：运行build all
+        {
+            "type": "shell",
+            "label": "buildall-release",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build/",
+                "--config",
+                "Release",
+                "--parallel",
+                "12",
+                "--target",
+                "all"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build",
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build", // 这里说明这个任务时输入"build"类型的，也就是说明，这是一个生成任务
+                "isDefault": true
+            },
+            "dependsOn": [
+                "cmake-release" // 这里设置，说明了这个任务一定要在Task “cmake”执行之后方可执行
+            ]
+        },
+        // Task 6：运行build ql_test_suite release
+        {
+            "type": "shell",
+            "label": "buildtestsuite-release",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build/",
+                "--config",
+                "Release",
+                "--parallel",
+                "12",
+                "--target",
+                "ql_test_suite"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build",
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build", // 这里说明这个任务时输入"build"类型的，也就是说明，这是一个生成任务
+                "isDefault": true
+            },
+            "dependsOn": [
+                "buildlib-release" // 这里设置，说明了这个任务一定要在Task “cmake”执行之后方可执行
+            ]
+        },
+        // Task 7：运行build ql_test_suite debug
+        {
+            "type": "shell",
+            "label": "buildtestsuite-debug",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build/",
+                "--config",
+                "Debug",
+                "--parallel",
+                "12",
+                "--target",
+                "ql_test_suite"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build",
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build", // 这里说明这个任务时输入"build"类型的，也就是说明，这是一个生成任务
+                "isDefault": true
+            },
+            "dependsOn": [
+                "buildlib-debug" // 这里设置，说明了这个任务一定要在Task “cmake”执行之后方可执行
+            ]
+        },
+        // Task 7：运行build ql_test_suite debug
+        {
+            "type": "shell",
+            "label": "buildtestmain-debug",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build/",
+                "--config",
+                "Debug",
+                "--parallel",
+                "12",
+                "--target",
+                "ql_unit_test_main"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build",
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build", // 这里说明这个任务时输入"build"类型的，也就是说明，这是一个生成任务
+                "isDefault": true
+            },
+            "dependsOn": [
+                "buildtestsuite-debug" // 这里设置，说明了这个任务一定要在Task “cmake”执行之后方可执行
+            ]
+        },
+        // Task 7：运行build ql_test_suite debug
+        {
+            "type": "shell",
+            "label": "buildtestmain-release",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build/",
+                "--config",
+                "Release",
+                "--parallel",
+                "12",
+                "--target",
+                "ql_unit_test_main"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build",
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build", // 这里说明这个任务时输入"build"类型的，也就是说明，这是一个生成任务
+                "isDefault": true
+            },
+            "dependsOn": [
+                "buildtestsuite-release" // 这里设置，说明了这个任务一定要在Task “cmake”执行之后方可执行
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}
