@@ -1,0 +1,405 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "BasketLosses",
+            "type":"lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Examples/BasketLosses/BasketLosses",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "/usr/bin/lldb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true,
+                    "preLaunchTask": "test"
+                }
+            ]
+        },
+        {
+            "name": "BermudanSwaption",
+            "type":"lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Examples/BermudanSwaption/BermudanSwaption",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "/usr/bin/lldb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true,
+                    "preLaunchTask": "test"
+                }
+            ]
+        },
+        {
+            "name": "Bonds",
+            "type":"lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Examples/Bonds/Bonds",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "/usr/bin/lldb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true,
+                    "preLaunchTask": "test"
+                }
+            ]
+        },
+        {
+            "name": "CallableBonds",
+            "type":"lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Examples/CallableBonds/CallableBonds",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "/usr/bin/lldb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true,
+                    "preLaunchTask": "test"
+                }
+            ]
+        },
+        {
+            "name": "CDS",
+            "type":"lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Examples/CDS/CDS",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "/usr/bin/lldb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true,
+                    "preLaunchTask": "test"
+                }
+            ]
+        },
+        {
+            "name": "ConvertibleBonds",
+            "type":"lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Examples/ConvertibleBonds/ConvertibleBonds",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "/usr/bin/lldb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true,
+                    "preLaunchTask": "test"
+                }
+            ]
+        },
+        {
+            "name": "CVAIRS",
+            "type":"lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Examples/CVAIRS/CVAIRS",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "/usr/bin/lldb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true,
+                    "preLaunchTask": "test"
+                }
+            ]
+        },
+        {
+            "name": "DiscreteHedging",
+            "type":"lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Examples/DiscreteHedging/DiscreteHedging",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "/usr/bin/lldb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true,
+                    "preLaunchTask": "test"
+                }
+            ]
+        },
+        {
+            "name": "EquityOption",
+            "type":"lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Examples/EquityOption/EquityOption",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "/usr/bin/lldb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true,
+                    "preLaunchTask": "test"
+                }
+            ]
+        },
+        {
+            "name": "FittedBondCurve",
+            "type":"lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Examples/FittedBondCurve/FittedBondCurve",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "/usr/bin/lldb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true,
+                    "preLaunchTask": "test"
+                }
+            ]
+        },
+        {
+            "name": "FRA",
+            "type":"lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Examples/FRA/FRA",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "/usr/bin/lldb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true,
+                    "preLaunchTask": "test"
+                }
+            ]
+        },
+        {
+            "name": "Gaussian1dModels",
+            "type":"lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Examples/Gaussian1dModels/Gaussian1dModels",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "/usr/bin/lldb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true,
+                    "preLaunchTask": "test"
+                }
+            ]
+        },
+        {
+            "name": "GlobalOptimizer",
+            "type":"lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Examples/GlobalOptimizer/GlobalOptimizer",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "/usr/bin/lldb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true,
+                    "preLaunchTask": "test"
+                }
+            ]
+        },
+        {
+            "name": "LatentModel",
+            "type":"lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Examples/LatentModel/LatentModel",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "/usr/bin/lldb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true,
+                    "preLaunchTask": "test"
+                }
+            ]
+        },
+        {
+            "name": "MarketModels",
+            "type":"lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Examples/MarketModels/MarketModels",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "/usr/bin/lldb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true,
+                    "preLaunchTask": "test"
+                }
+            ]
+        },
+        {
+            "name": "MulticurveBootstrapping",
+            "type":"lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Examples/MulticurveBootstrapping/MulticurveBootstrapping",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "/usr/bin/lldb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true,
+                    "preLaunchTask": "test"
+                }
+            ]
+        },
+        {
+            "name": "MultidimIntegral",
+            "type":"lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Examples/MultidimIntegral/MultidimIntegral",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "/usr/bin/lldb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true,
+                    "preLaunchTask": "test"
+                }
+            ]
+        },
+        {
+            "name": "Replication",
+            "type":"lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Examples/Replication/Replication",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "/usr/bin/lldb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true,
+                    "preLaunchTask": "test"
+                }
+            ]
+        },
+        {
+            "name": "Repo",
+            "type":"lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Examples/Repo/Repo",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "/usr/bin/lldb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true,
+                    "preLaunchTask": "test"
+                }
+            ]
+        }
+    ]
+}
