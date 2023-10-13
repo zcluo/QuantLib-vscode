@@ -1,405 +1,160 @@
 {
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "lldb",
+            "request": "launch",
             "name": "BasketLosses",
-            "type":"lldb",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/Examples/BasketLosses/BasketLosses",
+            "program": "${workspaceFolder}/build/linux-clang-ninja-debug/Examples/BasketLosses/BasketLosses",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true,
-                    "preLaunchTask": "test"
-                }
-            ]
+            "cwd": "${workspaceFolder}"
         },
         {
+            "type": "lldb",
+            "request": "launch",
             "name": "BermudanSwaption",
-            "type":"lldb",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/Examples/BermudanSwaption/BermudanSwaption",
+            "program": "${workspaceFolder}/build/linux-clang-ninja-debug/Examples/BermudanSwaption/BermudanSwaption",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true,
-                    "preLaunchTask": "test"
-                }
-            ]
+            "cwd": "${workspaceFolder}"
         },
         {
+            "type": "lldb",
+            "request": "launch",
             "name": "Bonds",
-            "type":"lldb",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/Examples/Bonds/Bonds",
+            "program": "${workspaceFolder}/build/linux-clang-ninja-debug/Examples/Bonds/Bonds",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true,
-                    "preLaunchTask": "test"
-                }
-            ]
+            "cwd": "${workspaceFolder}"
         },
         {
+            "type": "lldb",
+            "request": "launch",
             "name": "CallableBonds",
-            "type":"lldb",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/Examples/CallableBonds/CallableBonds",
+            "program": "${workspaceFolder}/build/linux-clang-ninja-debug/Examples/CallableBonds/CallableBonds",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true,
-                    "preLaunchTask": "test"
-                }
-            ]
+            "cwd": "${workspaceFolder}"
         },
         {
+            "type": "lldb",
+            "request": "launch",
             "name": "CDS",
-            "type":"lldb",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/Examples/CDS/CDS",
+            "program": "${workspaceFolder}/build/linux-clang-ninja-debug/Examples/CDS/CDS",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true,
-                    "preLaunchTask": "test"
-                }
-            ]
+            "cwd": "${workspaceFolder}"
         },
         {
+            "type": "lldb",
+            "request": "launch",
             "name": "ConvertibleBonds",
-            "type":"lldb",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/Examples/ConvertibleBonds/ConvertibleBonds",
+            "program": "${workspaceFolder}/build/linux-clang-ninja-debug/Examples/ConvertibleBonds/ConvertibleBonds",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true,
-                    "preLaunchTask": "test"
-                }
-            ]
+            "cwd": "${workspaceFolder}"
         },
         {
+            "type": "lldb",
+            "request": "launch",
             "name": "CVAIRS",
-            "type":"lldb",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/Examples/CVAIRS/CVAIRS",
+            "program": "${workspaceFolder}/build/linux-clang-ninja-debug/Examples/CVAIRS/CVAIRS",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true,
-                    "preLaunchTask": "test"
-                }
-            ]
+            "cwd": "${workspaceFolder}"
         },
         {
+            "type": "lldb",
+            "request": "launch",
             "name": "DiscreteHedging",
-            "type":"lldb",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/Examples/DiscreteHedging/DiscreteHedging",
+            "program": "${workspaceFolder}/build/linux-clang-ninja-debug/Examples/DiscreteHedging/DiscreteHedging",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true,
-                    "preLaunchTask": "test"
-                }
-            ]
+            "cwd": "${workspaceFolder}"
         },
         {
+            "type": "lldb",
+            "request": "launch",
             "name": "EquityOption",
-            "type":"lldb",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/Examples/EquityOption/EquityOption",
+            "program": "${workspaceFolder}/build/linux-clang-ninja-debug/Examples/EquityOption/EquityOption",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true,
-                    "preLaunchTask": "test"
-                }
-            ]
+            "cwd": "${workspaceFolder}"
         },
         {
+            "type": "lldb",
+            "request": "launch",
             "name": "FittedBondCurve",
-            "type":"lldb",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/Examples/FittedBondCurve/FittedBondCurve",
+            "program": "${workspaceFolder}/build/linux-clang-ninja-debug/Examples/FittedBondCurve/FittedBondCurve",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true,
-                    "preLaunchTask": "test"
-                }
-            ]
+            "cwd": "${workspaceFolder}"
         },
         {
+            "type": "lldb",
+            "request": "launch",
             "name": "FRA",
-            "type":"lldb",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/Examples/FRA/FRA",
+            "program": "${workspaceFolder}/build/linux-clang-ninja-debug/Examples/FRA/FRA",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true,
-                    "preLaunchTask": "test"
-                }
-            ]
+            "cwd": "${workspaceFolder}"
         },
         {
+            "type": "lldb",
+            "request": "launch",
             "name": "Gaussian1dModels",
-            "type":"lldb",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/Examples/Gaussian1dModels/Gaussian1dModels",
+            "program": "${workspaceFolder}/build/linux-clang-ninja-debug/Examples/Gaussian1dModels/Gaussian1dModels",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true,
-                    "preLaunchTask": "test"
-                }
-            ]
+            "cwd": "${workspaceFolder}"
         },
         {
+            "type": "lldb",
+            "request": "launch",
             "name": "GlobalOptimizer",
-            "type":"lldb",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/Examples/GlobalOptimizer/GlobalOptimizer",
+            "program": "${workspaceFolder}/build/linux-clang-ninja-debug/Examples/GlobalOptimizer/GlobalOptimizer",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true,
-                    "preLaunchTask": "test"
-                }
-            ]
+            "cwd": "${workspaceFolder}"
         },
         {
+            "type": "lldb",
+            "request": "launch",
             "name": "LatentModel",
-            "type":"lldb",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/Examples/LatentModel/LatentModel",
+            "program": "${workspaceFolder}/build/linux-clang-ninja-debug/Examples/LatentModel/LatentModel",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true,
-                    "preLaunchTask": "test"
-                }
-            ]
+            "cwd": "${workspaceFolder}"
         },
         {
+            "type": "lldb",
+            "request": "launch",
             "name": "MarketModels",
-            "type":"lldb",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/Examples/MarketModels/MarketModels",
+            "program": "${workspaceFolder}/build/linux-clang-ninja-debug/Examples/MarketModels/MarketModels",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true,
-                    "preLaunchTask": "test"
-                }
-            ]
+            "cwd": "${workspaceFolder}"
         },
         {
+            "type": "lldb",
+            "request": "launch",
             "name": "MulticurveBootstrapping",
-            "type":"lldb",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/Examples/MulticurveBootstrapping/MulticurveBootstrapping",
+            "program": "${workspaceFolder}/build/linux-clang-ninja-debug/Examples/MulticurveBootstrapping/MulticurveBootstrapping",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true,
-                    "preLaunchTask": "test"
-                }
-            ]
+            "cwd": "${workspaceFolder}"
         },
         {
+            "type": "lldb",
+            "request": "launch",
             "name": "MultidimIntegral",
-            "type":"lldb",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/Examples/MultidimIntegral/MultidimIntegral",
+            "program": "${workspaceFolder}/build/linux-clang-ninja-debug/Examples/MultidimIntegral/MultidimIntegral",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true,
-                    "preLaunchTask": "test"
-                }
-            ]
+            "cwd": "${workspaceFolder}"
         },
         {
+            "type": "lldb",
+            "request": "launch",
             "name": "Replication",
-            "type":"lldb",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/Examples/Replication/Replication",
+            "program": "${workspaceFolder}/build/linux-clang-ninja-debug/Examples/Replication/Replication",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true,
-                    "preLaunchTask": "test"
-                }
-            ]
+            "cwd": "${workspaceFolder}"
         },
         {
-            "name": "Repo",
-            "type":"lldb",
+            "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}/build/Examples/Repo/Repo",
+            "name": "Repo",
+            "program": "${workspaceFolder}/build/linux-clang-ninja-debug/Examples/Repo/Repo",
             "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true,
-                    "preLaunchTask": "test"
-                }
-            ]
+            "cwd": "${workspaceFolder}"
         }
     ]
 }
